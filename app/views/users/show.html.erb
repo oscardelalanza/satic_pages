@@ -1,12 +1,14 @@
-<% provide(:title, @user.name) %> <!-- inherits from the application layout and provude the name as a title -->
+<!-- inherits from the application layout and provude the name as a title -->
+<% provide(:title, @user.name) %>
 
 <!-- adding an avatar image -->
-<h1>
-    <%= gravatar_for(@user) %>
-    <%= @user.name %>
-</h1>
-
-<%= @user.name %>, <%= @user.email %> 
-<%= @user.created_at %> 
-<%= @user.updated_at %>
-<%= Time.now %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for(@user) %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
