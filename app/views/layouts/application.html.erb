@@ -3,6 +3,7 @@
   <head>
     <%= render 'layouts/rails_default' %>
     <%= render 'layouts/shim' %>
+    <title><%= full_title(yield(:title)) %></title>
   </head>
   <body>
     <%= render 'layouts/header' %>
