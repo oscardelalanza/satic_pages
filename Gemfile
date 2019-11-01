@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 ############################### my gems ########################################
+gem 'jquery-rails'
+gem 'popper_js'
 gem 'bootstrap-sass'
 ################################################################################
 
