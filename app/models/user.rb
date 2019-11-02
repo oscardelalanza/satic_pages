@@ -16,4 +16,11 @@ class User < ApplicationRecord
   before_save do
     email.downcase!
   end
+  
+  # other methods
+  # returns the hash digest of the given string
+  def self.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST  : BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+  end
 end
