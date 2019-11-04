@@ -39,6 +39,8 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+Layout/TrailingWhitespace:
+  Enabled: false
 
 Bundler/OrderedGems:
   Enabled: false
