@@ -20,9 +20,15 @@ class User < ApplicationRecord
   end
   
   # instance methods
+  # set a remember token on the database
   def remember
     self.remember_token = User.new_token
     update_attribute(:remember_digest, User.digest(remember_token))
+  end
+  
+  # returns true of the given token matches the digest
+  def authenticated?(remember_token)
+    BCrypt::Password.new(self.remember_digest).is_password?(remember_token)
   end
   
   # class methods
