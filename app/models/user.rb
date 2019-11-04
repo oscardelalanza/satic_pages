@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  # accessors
+  attr_accessor :remember_token
 
   # constants
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
@@ -14,13 +16,19 @@ class User < ApplicationRecord
 
   # callbacks
   before_save do
-    email.downcase!
+    self.email.downcase!
   end
   
-  # other methods
+  # instance methods
+  def remember
+    self.remember_token = User.new_token
+    update_attribute(:remember_digest, User.digest(remember_token))
+  end
+  
+  # class methods
   # returns the hash digest of the given string
   def self.digest(string)
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST  : BCrypt::Engine.cost
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
   
