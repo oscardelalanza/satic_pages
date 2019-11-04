@@ -31,6 +31,8 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Style/SymbolArray:
   Enabled: false
+Style/RedundantSelf:
+  Enabled: false
 
 Layout/AlignHash:
   EnforcedColonStyle: key
