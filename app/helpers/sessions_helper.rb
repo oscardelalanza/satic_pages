@@ -25,6 +25,11 @@ module SessionsHelper
     @current_user = nil
   end
 
+  # Returns true if the given user is the current user.
+  def current_user?(user)
+    user == current_user
+  end
+
   # this will find the current logged user
   def current_user
     if (user_id = session[:user_id])
