@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  # accessors
+  attr_accessor :remember_token
 
   # constants
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
@@ -14,13 +16,37 @@ class User < ApplicationRecord
 
   # callbacks
   before_save do
-    email.downcase!
+    self.email.downcase!
   end
   
-  # other methods
+  # instance methods
+  # set a remember token on the database
+  def remember
+    self.remember_token = User.new_token
+    update_attribute(:remember_digest, User.digest(remember_token))
+  end
+  
+  # forget a remember token from the data base
+  def forget
+    update_attribute(:remember_digest, nil)
+  end
+  
+  # returns true of the given token matches the digest
+  def authenticated?(remember_token)
+    return false if remember_digest.nil?
+    
+    BCrypt::Password.new(self.remember_digest).is_password?(remember_token)
+  end
+  
+  # class methods
   # returns the hash digest of the given string
   def self.digest(string)
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST  : BCrypt::Engine.cost
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
+  end
+  
+  # return a random token
+  def self.new_token
+    SecureRandom.urlsafe_base64
   end
 end
