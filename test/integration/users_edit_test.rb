@@ -17,5 +17,6 @@ class UsersEditTest < ActionDispatch::IntegrationTest
       }
     }
     assert_template 'users/edit'
+    assert_select "div.alert", text: "The form contains 4 errors", count: 1
   end
 end
