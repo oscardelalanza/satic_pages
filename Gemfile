@@ -5,6 +5,7 @@ ruby '2.6.5'
 
 ############################### my gems ########################################
 gem 'bootstrap-sass'
+gem 'faker'
 ################################################################################
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
