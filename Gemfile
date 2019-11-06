@@ -6,7 +6,7 @@ ruby '2.6.5'
 ############################### my gems ########################################
 gem 'bootstrap-sass'
 gem 'faker'
-gem 'will_paginate', '3.1.6'
+gem 'will_paginate'
 gem 'bootstrap-will_paginate', '1.0.0'
 ################################################################################
 
