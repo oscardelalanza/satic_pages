@@ -7,7 +7,7 @@ ruby '2.6.5'
 gem 'bootstrap-sass'
 gem 'faker'
 gem 'will_paginate'
-gem 'bootstrap-will_paginate', '1.0.0'
+# gem 'bootstrap-will_paginate'
 ################################################################################
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
