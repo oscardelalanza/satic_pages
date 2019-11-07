@@ -11,7 +11,7 @@ gem 'bootstrap-will_paginate', '1.0.0'
 ################################################################################
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.0'
+gem 'rails', '6.0.0'
 # uses bcrypt for encrypt password
 gem 'bcrypt'
 # Use Puma as the app server
