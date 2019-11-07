@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   # accessors
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
 
   # constants
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
@@ -14,10 +14,10 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-  # callbacks
-  before_save do
-    self.email.downcase!
-  end
+  # before actions
+  before_save :downcase_email
+  before_create :create_activation_digest
+  
   
   # instance methods
   # set a remember token on the database
@@ -48,5 +48,16 @@ class User < ApplicationRecord
   # return a random token
   def self.new_token
     SecureRandom.urlsafe_base64
+  end
+  
+  private
+  
+  def downcase_email
+    self.email.downcase!
+  end
+  
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest(self.activation_token)
   end
 end
