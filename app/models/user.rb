@@ -38,6 +38,17 @@ class User < ApplicationRecord
     BCrypt::Password.new(digest).is_password?(token)
   end
   
+  # activates an account
+  def activate
+    update_attribute(:activated, true)
+    update_attribute(:activated_at, Time.zone.now)
+  end
+  
+  # sends activation email
+  def send
+    UserMailer.account_activation(self).deliver_now
+  end
+  
   # class methods
   # returns the hash digest of the given string
   def self.digest(string)
