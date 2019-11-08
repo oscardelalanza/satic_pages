@@ -9,11 +9,11 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
-    redirect_to root_url unless @user.activated
   end
 
   def show
     @user = User.find(params[:id])
+    redirect_to root_url unless @user.activated
   end
 
   def create
