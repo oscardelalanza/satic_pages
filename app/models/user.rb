@@ -1,24 +1,25 @@
 class User < ApplicationRecord
-  # accessors
+  ################################################### accessors ########################################################
   attr_accessor :remember_token, :activation_token, :reset_token
 
-  # constants
+  ################################################### constants ########################################################
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
 
-  # relations
+  ################################################### relations ########################################################
+  has_many :microposts, dependent: :destroy
+  
+  #################################################### configs #########################################################
   has_secure_password
-  has_many :microposts
 
-  # validations
+  ################################################## validations #######################################################
   validates :name, presence: true, length: { maximum: 50 }
-  validates :email, presence: true, length: { maximum: 50 },
-                    format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+  validates :email, presence: true, length: { maximum: 50 }, format: { with: VALID_EMAIL_REGEX },
+            uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   # before actions
   before_save :downcase_email
   before_create :create_activation_digest
-  
   
   # instance methods
   # set a remember token on the database
