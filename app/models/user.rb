@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   # relations
   has_secure_password
+  has_many :microposts
 
   # validations
   validates :name, presence: true, length: { maximum: 50 }
