@@ -1,23 +1,25 @@
 class User < ApplicationRecord
-  # accessors
+  ################################################### accessors ########################################################
   attr_accessor :remember_token, :activation_token, :reset_token
 
-  # constants
+  ################################################### constants ########################################################
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
 
-  # relations
+  ################################################### relations ########################################################
+  has_many :microposts, dependent: :destroy
+  
+  #################################################### configs #########################################################
   has_secure_password
 
-  # validations
+  ################################################## validations #######################################################
   validates :name, presence: true, length: { maximum: 50 }
-  validates :email, presence: true, length: { maximum: 50 },
-                    format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+  validates :email, presence: true, length: { maximum: 50 }, format: { with: VALID_EMAIL_REGEX },
+            uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-  # before actions
+  ################################################# before actions #####################################################
   before_save :downcase_email
   before_create :create_activation_digest
-  
   
   # instance methods
   # set a remember token on the database
@@ -74,6 +76,12 @@ class User < ApplicationRecord
   # Returns true if a password reset has expired.
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+  # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    Micropost.where("user_id = ?", id)
   end
   
   private
