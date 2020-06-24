@@ -39,3 +39,22 @@ $ rails server
 
 For more information, see the
 [*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
+
+## Authors
+
+👤 **Oscar De La Lanza**
+
+- Github: [@oscardelalanza](https://github.com/oscardelalanza)
+- Twitter: [@twitterhandle](https://twitter.com/oscardelalanza)
+- Linkedin: [Oscar De La Lanza](https://linkedin.com/in/oscardelalanza/)
+- Email: oscardelalanza@gmail.com
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
