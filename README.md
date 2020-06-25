@@ -1,10 +1,13 @@
 # Ruby on Rails Tutorial sample application
+> This is a project based in Ruby on Rails tutorial. The goal of this project is develop a basic app similar to a social 
+> network with the basic features to create micro-posts.
 
 This is the sample application for
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
+![screenshot](screenshots/static-pages.png)
 ## License
 
 All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
