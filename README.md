@@ -27,6 +27,12 @@ is available jointly under the MIT License and the Beerware License. See
 
 ### Setup
 
+To clone the project in your local environment do the following
+
+- Open a new `terminal` window and navigate to the directory where the project will be stored
+- Run the command `git clone git@github.com:oscardelalanza/satic_pages.git`
+- Run the command `cd satic_pages` to enter the project directory
+
 ### Install
 
 ### Usage
