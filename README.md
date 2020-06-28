@@ -8,11 +8,16 @@ Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
 ![screenshot](screenshots/static-pages.png)
+
 ## License
 
 All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
 is available jointly under the MIT License and the Beerware License. See
 [LICENSE.md](LICENSE.md) for details.
+
+## Live Demo
+
+[Live Demo Link](https://fast-dawn-38965.herokuapp.com/)
 
 ## Getting started
 
@@ -40,6 +45,8 @@ To clone the project in your local environment do the following
 - Create and migrate the database running the command `rails db:migrate`
 
 ### Usage
+
+- Click on `Sign up now!` to 
 
 ### Run tests
 
