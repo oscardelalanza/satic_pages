@@ -47,6 +47,8 @@ To clone the project in your local environment do the following
 
 ### Deployment
 
+- To start the local server run the command `rails server`
+
 To get started with the app, clone the repo and then install the needed gems:
 
 ```
