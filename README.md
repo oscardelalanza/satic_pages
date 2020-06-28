@@ -16,6 +16,25 @@ is available jointly under the MIT License and the Beerware License. See
 
 ## Getting started
 
+> To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+- `Git`
+- `Ruby 2.6.5`
+- `Rails 6`
+- `PostgreSQL`
+
+### Setup
+
+### Install
+
+### Usage
+
+### Run tests
+
+### Deployment
+
 To get started with the app, clone the repo and then install the needed gems:
 
 ```
