@@ -67,6 +67,16 @@ In this section is the main section, you will find the `Micropost Feed` and an i
 In this section you will find the list of users registered in the app. 
 ![users](screenshots/users.png)
 
+#### Account
+
+This is a dropdown list that displays the following links
+
+- `Profile` this link will redirect you to your profile info.
+- `Settings` use this link if you want to update your account info.
+- `Log out` use this link to end your session in the app
+
+![account](screenshots/account.png)
+
 ### Run tests
 
 - Run the command `rails test`
