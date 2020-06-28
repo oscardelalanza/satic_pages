@@ -1,4 +1,4 @@
-# Ruby on Rails Tutorial sample application
+# Ruby on Rails Tutorial Static Pages
 > This is a project based in Ruby on Rails tutorial. The goal of this project is develop a basic app similar to a social 
 > network with the basic features to create micro-posts.
 
