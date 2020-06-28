@@ -43,6 +43,8 @@ To clone the project in your local environment do the following
 
 ### Run tests
 
+- Run the command `rails test`
+
 ### Deployment
 
 To get started with the app, clone the repo and then install the needed gems:
