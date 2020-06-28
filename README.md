@@ -62,6 +62,11 @@ In this section is the main section, you will find the `Micropost Feed` and an i
 - `New posts` form to create new posts, and also attach images to it.
 ![new](screenshots/new.png)
 
+#### Users
+
+In this section you will find the list of users registered in the app. 
+![users](screenshots/users.png)
+
 ### Run tests
 
 - Run the command `rails test`
