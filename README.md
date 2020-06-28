@@ -46,7 +46,10 @@ To clone the project in your local environment do the following
 
 ### Usage
 
-- Click on `Sign up now!` to 
+- Click on `Sign up now!` button and fill the form to create your account
+- Check your email and open the `activation` link to start using your account
+- Use the links in the navigation bar to switch between the different sections of the site.
+![navbar](screenshots/navbar.png)
 
 ### Run tests
 
