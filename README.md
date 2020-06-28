@@ -51,6 +51,17 @@ To clone the project in your local environment do the following
 - Use the links in the navigation bar to switch between the different sections of the site.
 ![navbar](screenshots/navbar.png)
 
+#### Home
+
+In this section is the main section, you will find the `Micropost Feed` and an input to create new `posts`
+
+- `Micropost feed` display all your posts sorted by date. Notice that also each post contain a `delete` link to remove unwanted posts
+![feed](screenshots/feed.png)
+
+
+- `New posts` form to create new posts, and also attach images to it.
+![new](screenshots/new.png)
+
 ### Run tests
 
 - Run the command `rails test`
