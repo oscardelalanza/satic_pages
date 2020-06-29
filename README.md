@@ -32,32 +32,31 @@ is available jointly under the MIT License and the Beerware License. See
 
 ### Setup
 
-To clone the project in your local environment do the following
+To clone the project in your local environment do the following.
 
-- Open a new `terminal` window and navigate to the directory where the project will be stored
-- Run the command `git clone git@github.com:oscardelalanza/satic_pages.git`
-- Run the command `cd satic_pages` to enter the project directory
+- Open a new `terminal` window and navigate to the directory where the project will be stored.
+- Run the command `git clone git@github.com:oscardelalanza/satic_pages.git`.
+- Run the command `cd satic_pages` to enter the project directory.
 
 ### Install
 
-- Install the required gems running the command `bundle install --without production`
-- Install the required node modules running the command `yarn install`
-- Create and migrate the database running the command `rails db:migrate`
+- Install the required gems running the command `bundle install --without production`.
+- Install the required node modules running the command `yarn install`.
+- Create and migrate the database running the command `rails db:migrate`.
 
 ### Usage
 
-- Click on `Sign up now!` button and fill the form to create your account
-- Check your email and open the `activation` link to start using your account
+- Click on `Sign up now!` button and fill the form to create your account.
+- Check your email and open the `activation` link to start using your account.
 - Use the links in the navigation bar to switch between the different sections of the site.
 ![navbar](screenshots/navbar.png)
 
 #### Home
 
-In this section is the main section, you will find the `Micropost Feed` and an input to create new `posts`
+In this section is the main section, you will find the `Micropost Feed` and an input to create new `posts`.
 
-- `Micropost feed` display all your posts sorted by date. Notice that also each post contain a `delete` link to remove unwanted posts
+- `Micropost feed` display all your posts sorted by date. Notice that also each post contain a `delete` link to remove unwanted posts.
 ![feed](screenshots/feed.png)
-
 
 - `New posts` form to create new posts, and also attach images to it.
 ![new](screenshots/new.png)
@@ -69,21 +68,21 @@ In this section you will find the list of users registered in the app.
 
 #### Account
 
-This is a dropdown list that displays the following links
+This is a dropdown list that displays the following links.
 
 - `Profile` this link will redirect you to your profile info.
 - `Settings` use this link if you want to update your account info.
-- `Log out` use this link to end your session in the app
+- `Log out` use this link to end your session in the app.
 
 ![account](screenshots/account.png)
 
 ### Run tests
 
-- Run the command `rails test`
+- Run the command `rails test`.
 
 ### Deployment
 
-- To start the local server run the command `rails server`
+- To start the local server run the command `rails server`.
 
 For more information, see the
 [*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
