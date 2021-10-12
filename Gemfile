@@ -17,7 +17,7 @@ gem 'rails', '6.0.0'
 # uses bcrypt for encrypt password
 gem 'bcrypt'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 5.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
